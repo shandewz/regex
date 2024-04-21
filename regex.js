@@ -40,7 +40,8 @@ $(function () {
             if (!isValidEmail(emailInput.value)) {
                 emailError.textContent = 'Invalid email format.';
             } else {
-                emailError.textContent = '';
+                emailError.textContent = 'Email is correct.';
+                emailError.style.color = 'green';
             }
         }
     });
@@ -56,7 +57,8 @@ $(function () {
             if (!phonePattern.test(phoneInput.value)) {
                 phoneError.textContent = 'Invalid phone number.';
             } else {
-                phoneError.textContent = '';
+                phoneError.textContent = 'Phone number is correct.';
+                phoneError.style.color = 'green';
             }
         }
     });
@@ -70,9 +72,10 @@ $(function () {
     postalInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!postalPattern.test(postalInput.value)) {
-                postalError.textContent = 'Invalid postal code. Enter 5 digits of numbers.';
+                postalError.textContent = 'Invalid postal code. Enter at least 5 characters.';
             } else {
-                postalError.textContent = '';
+                postalError.textContent = 'Postal code is correct.';
+                postalError.style.color = 'green';
             }
         }
     });
@@ -88,7 +91,8 @@ $(function () {
             if (!idPattern.test(idInput.value)) {
                 idError.textContent = 'Invalid ID number. Enter at least 16 characters.';
             } else {
-                idError.textContent = '';
+                idError.textContent = 'ID is correct.';
+                idError.style.color = 'green';
             }
         }
     });
@@ -98,7 +102,8 @@ $(function () {
             if (!passwordPattern.test(passwordInput.value)) {
                 passwordError.textContent = 'Invalid password. Use uppercase, lowercase, symbol, and number. Enter maximum 8 characters.';
             } else {
-                passwordError.textContent = '';
+                passwordError.textContent = 'Password is strong.';
+                passwordError.style.color = 'green';
             }
         }
     });
