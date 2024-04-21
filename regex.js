@@ -54,7 +54,7 @@ $(function () {
     phoneInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!phonePattern.test(phoneInput.value)) {
-                phoneError.textContent = 'Invalid phone number. Enter at least 12 digits of numbers.';
+                phoneError.textContent = 'Invalid phone number.';
             } else {
                 phoneError.textContent = '';
             }
@@ -90,12 +90,6 @@ $(function () {
             } else {
                 idError.textContent = '';
             }
-        }
-    });
-
-    passwordInput.addEventListener('input', function() {
-        if (passwordInput.value === '') {
-            passwordError.textContent = '';
         }
     });
 
