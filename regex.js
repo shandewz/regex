@@ -4,14 +4,12 @@ $(function () {
     const postalInput = document.getElementById('postal');
     const idInput = document.getElementById('id');
     const passwordInput = document.getElementById('password');
-    const nikInput = document.getElementById('nik'); // Menambahkan elemen untuk NIK
 
     const emailError = document.getElementById('email-error');
     const phoneError = document.getElementById('phone-error');
     const postalError = document.getElementById('postal-error');
     const idError = document.getElementById('id-error');
     const passwordError = document.getElementById('password-error');
-    const nikError = document.getElementById('nik-error'); // Menambahkan elemen untuk NIK
 
     // Fungsi untuk memeriksa apakah sebuah string adalah email yang valid
     const isValidEmail = (email) => {
@@ -31,9 +29,6 @@ $(function () {
     // Regular expression untuk memeriksa apakah input password valid
     const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
 
-    // Regular expression untuk memeriksa apakah input NIK valid
-    const nikPattern = /^\d{16}$/; // NIK Indonesia umumnya terdiri dari 16 digit angka
-
     emailInput.addEventListener('input', function() {
         if (emailInput.value === '') {
             emailError.textContent = '';
@@ -43,7 +38,7 @@ $(function () {
     emailInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!isValidEmail(emailInput.value)) {
-                emailError.textContent = 'Invalid email format';
+                emailError.textContent = 'Invalid email format.';
             } else {
                 emailError.textContent = '';
             }
@@ -59,7 +54,7 @@ $(function () {
     phoneInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!phonePattern.test(phoneInput.value)) {
-                phoneError.textContent = 'Invalid phone number. Enter at least 12 digits';
+                phoneError.textContent = 'Invalid phone number. Enter at least 12 digits of numbers.';
             } else {
                 phoneError.textContent = '';
             }
@@ -75,7 +70,7 @@ $(function () {
     postalInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!postalPattern.test(postalInput.value)) {
-                postalError.textContent = 'Invalid postal code';
+                postalError.textContent = 'Invalid postal code. Enter 5 digits of numbers.';
             } else {
                 postalError.textContent = '';
             }
@@ -91,7 +86,7 @@ $(function () {
     idInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!idPattern.test(idInput.value)) {
-                idError.textContent = 'Invalid ID number';
+                idError.textContent = 'Invalid ID number. Enter at least 16 characters.';
             } else {
                 idError.textContent = '';
             }
@@ -107,25 +102,9 @@ $(function () {
     passwordInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!passwordPattern.test(passwordInput.value)) {
-                passwordError.textContent = 'Invalid password';
+                passwordError.textContent = 'Invalid password. Use uppercase, lowercase, symbol, and number. Enter maximum 8 characters.';
             } else {
                 passwordError.textContent = '';
-            }
-        }
-    });
-
-    nikInput.addEventListener('input', function() {
-        if (nikInput.value === '') {
-            nikError.textContent = '';
-        }
-    });
-
-    nikInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            if (!nikPattern.test(nikInput.value)) {
-                nikError.textContent = 'Invalid ID number';
-            } else {
-                nikError.textContent = '';
             }
         }
     });
