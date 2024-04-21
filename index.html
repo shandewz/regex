@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <link href="tailwind-components/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-b from-pink-100 to-pink-200 min-h-screen flex items-center justify-center">
+    <section class="bg-gradient-to-b from-pink-100 to-pink-200 w-96 rounded-lg shadow-2xl p-10">
+        <h1 class="text-center text-pink-700 font-serif text-3xl font-bold mb-7">Regular Expression</h1>
+        <div class="grid grid-cols-1 gap-6 bg-pink-200 rounded-lg p-6">
+            <div>
+                <h1 class="font-semibold text-lg text-pink-600">Check Email</h1>
+                <input type="text" id="email" name="email" placeholder="Enter email" autocomplete="off" class="mt-2 w-full p-2 rounded-lg border border-pink-500 bg-pink-100">
+                <p id="email-error" class="font-light text-red-500"></p>
+            </div>
+            <div>
+                <h1 class="font-semibold text-lg text-pink-600">Check Phone Number</h1>
+                <input type="text" id="phone" name="phone" placeholder="Enter phone number" autocomplete="off" class="mt-2 w-full p-2 rounded-lg border border-pink-500 bg-pink-100">
+                <p id="phone-error" class="font-light text-red-500"></p>
+            </div>
+            <div>
+                <h1 class="font-semibold text-lg text-pink-600">Check Postal Code</h1>
+                <input type="text" id="postal" name="postal" placeholder="Enter postal code" autocomplete="off" class="mt-2 w-full p-2 rounded-lg border border-pink-500 bg-pink-100">
+                <p id="postal-error" class="font-light text-red-500"></p>
+            </div>
+            <div>
+                <h1 class="font-semibold text-lg text-pink-600">Check ID number</h1>
+                <input type="text" id="id" name="id" placeholder="Enter ID number" autocomplete="off" class="mt-2 w-full p-2 rounded-lg border border-pink-500 bg-pink-100">
+                <p id="id-error" class="font-light text-red-500"></p>
+            </div>
+            <div>
+                <h1 class="font-semibold text-lg text-pink-600">Check Strong Password</h1>
+                <input type="password" id="password" name="password" placeholder="Enter password" autocomplete="off" class="mt-2 w-full p-2 rounded-lg border border-pink-500 bg-pink-100">
+                <p id="password-error" class="font-light text-red-500"></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="regex.js"></script>
+</body>
+
+</html>
