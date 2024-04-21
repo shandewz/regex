@@ -72,7 +72,7 @@ $(function () {
     postalInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (!postalPattern.test(postalInput.value)) {
-                postalError.textContent = 'Invalid postal code. Enter at least 5 characters.';
+                postalError.textContent = 'Invalid postal code. Enter 5 digits of numbers.';
             } else {
                 postalError.textContent = 'Postal code is correct.';
                 postalError.style.color = 'green';
